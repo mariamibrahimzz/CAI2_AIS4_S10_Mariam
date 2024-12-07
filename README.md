@@ -1,0 +1,1 @@
+A whole managment system for a certain coroprate that gives the admins access to the employee's information. It includes their Nammes, Id , Position, Salaries, and emails. They can access any information and can add, update, search or remove any employee or any of his attributes
