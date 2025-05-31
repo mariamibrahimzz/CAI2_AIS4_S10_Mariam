@@ -57,20 +57,68 @@ You can edit this file directly or use the program to manage it through the UI.
 - Python 3.x installed  
 (No external libraries needed — only built-in modules)
 
-=======Employee Data Management System======
-Choose from the following:
-1. Add Employee
-2. Update Employee
-3. Delete Employee
-4. Search Employee
-5. List All Employees
-6. Exit
-Enter your choice: 1
+## Interaction Sample 
+- action: Start Program
+  menu:
+    - "1. Add Employee"
+    - "2. Update Employee"
+    - "3. Delete Employee"
+    - "4. Search Employee"
+    - "5. List All Employees"
+    - "6. Exit"
 
-Enter Employee ID: 103
-Enter Name: Alice
-Enter Position: Engineer
-Enter Salary: 47000
-Enter Email: alice@company.com
-Employee has been added successfully.
+- action: Add Employee
+  input:
+    Employee ID: "103"
+    Name: "Alice Johnson"
+    Position: "Software Engineer"
+    Salary: "47000"
+    Email: "alice.johnson@company.com"
+  output: "Employee has been added successfully."
+
+- action: Search Employee
+  input:
+    Employee ID: "103"
+  output: 
+    - ID: 103
+    - Name: Alice Johnson
+    - Position: Software Engineer
+    - Salary: 47000
+    - Email: alice.johnson@company.com
+
+- action: Update Employee
+  input:
+    Employee ID: "103"
+    Attribute to Update: "3"  # Salary
+    New Salary: "50000"
+  output: "Employee updated successfully."
+
+- action: Exit
+  output: "Exiting the system."
+## Error Handling Examples
+
+- action: Add Employee
+  input:
+    Employee ID: "101"  # Already exists
+  output: "Employee with ID 101 is already in our corporate."
+
+- action: Update Employee
+  input:
+    Employee ID: "999"  # Doesn't exist
+  output: "Employee with ID 999 is not in our corporate."
+
+- action: Delete Employee
+  input:
+    Employee ID: "888"  # Doesn't exist
+  output: "Employee with ID 888 is not in our corporate."
+
+- action: Search Employee
+  input:
+    Employee ID: "777"  # Doesn't exist
+  output: "Employee is not in our corporate."
+
+- action: Invalid Menu Choice
+  input: "9"
+  output: "Invalid choice. Please try again."
+
 
