@@ -122,3 +122,6 @@ You can edit this file directly or use the program to manage it through the UI.
   output: "Invalid choice. Please try again."
 
 
+## 👩‍💻 This project was developed by Mariam Ibrahim as part of her journey into AI, data systems, and automation.
+Check out more of her work on [https://github.com/mariamibrahimzz/].
+
